@@ -5,9 +5,9 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
 
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   // ...
-}
+};
