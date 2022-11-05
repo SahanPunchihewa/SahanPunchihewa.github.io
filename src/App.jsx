@@ -1,13 +1,9 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./Components/Header/Header";
 
 function App() {
   return (
     <div>
-      <Router>
-        <Header />
-      </Router>
+      <h1 className="text-align-center">I'm Sahan Punchihewa</h1>
     </div>
   );
 }

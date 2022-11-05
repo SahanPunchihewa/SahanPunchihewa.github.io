@@ -7,8 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "fix-format": "prettier --write .",
-    "check-format": "prettier --check ."
+    "fix:format": "prettier --write .",
+    "check:format": "prettier --check .",
+    "check:lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.2",
@@ -20,6 +22,9 @@
     "react-router-dom": "^6.4.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/node": "^7.20.2",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
