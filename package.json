@@ -1,42 +1,17 @@
 {
-  "name": "vite-project",
+  "name": "nextjs-blog",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "fix:format": "prettier --write .",
-    "check:format": "prettier --check .",
-    "check:lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.2",
-    "@heroicons/react": "^2.0.11",
-    "headlessui": "^0.0.0",
-    "heroicons": "^2.0.11",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.20.2",
-    "@babel/eslint-parser": "^7.19.1",
-    "@babel/node": "^7.20.2",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
-    "autoprefixer": "^10.4.12",
-    "eslint": "^8.26.0",
-    "eslint-plugin-react": "^7.31.10",
-    "husky": "^8.0.1",
-    "prettier": "2.7.1",
-    "vite": "^3.1.0"
-  },
-  "main": "index.js",
-  "repository": "https://github.com/SahanPunchihewa/SahanPunchihewa.github.io.git",
-  "author": "Sahan Punchihewa <sahannilupul18@gmail.com>",
-  "license": "MIT"
+    "@next/font": "13.1.2",
+    "next": "13.1.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
 }
