@@ -69,7 +69,7 @@ function App() {
               <li>
                 <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
-                  href="https://drive.google.com/file/d/1iYnnAivp06mp9SwalvmeMOp5A9uSueXl/view"
+                  href="https://drive.google.com/file/d/1GQm3hW41l-e4k7Q5w_9hgkuoFcMC9_CW/view"
                   target="_blank" rel="noopener noreferrer"
                 >
                   Resume
