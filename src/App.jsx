@@ -1,20 +1,57 @@
-// App.js
 import React, { useState } from 'react';
 import { AiFillMail, AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import deved from './assets/dev-ed-wave.png';
-import code from './assets/code.png';
-import design from './assets/design.png';
-import consulting from './assets/consulting.png';
-import web1 from './assets/web1.png';
-import web2 from './assets/web2.png';
-import web3 from './assets/web3.png';
-import web4 from './assets/web4.png';
-import web5 from './assets/web5.png';
-import web6 from './assets/web6.png';
+import research from './assets/research.png';
+import iwt from "./assets/iwt.png";
+import oop from './assets/oop.png';
+import csse from './assets/csse.png';
+import ead from './assets/ead.png';
+import ds from './assets/ds.png';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+
+  const projects = [
+    { id: 1, image: research, alt: 'Project 1' },
+    { id: 2, image: iwt, alt: 'Project 2' },
+    { id: 3, image: oop, alt: 'Project 3' },
+    { id: 4, image: csse, alt: 'Project 4' },
+    { id: 5, image: ead, alt: 'Project 5' },
+    { id: 6, image: ds, alt: 'Project 6' }
+  ];
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      }
+    ]
+  };
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -48,11 +85,10 @@ function App() {
               Associate Software Engineer.
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              I currently pursue a Software Engineering undergraduate
+              I am currently pursuing a Software Engineering undergraduate
               degree at Sri Lanka Institute of Information Technology
-              (SLIIT). With the interested in web development and
-              having considerable extent of experience in software
-              engineering field, I'm seeking available exciting
+              (SLIIT). I am passionate about web development and have
+              considerable experience in the software engineering field. I am seeking exciting
               opportunities related to the same.
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
@@ -73,47 +109,39 @@ function App() {
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-white">Services I offer</h3>
+            <h3 className="text-3xl py-1 dark:text-white">Technologies and Tools I Use</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and developer, I've done remote work for
-              <span className="text-teal-500"> agencies </span>
-              consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talented people to create digital products for both business and consumer use.
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer a wide range of services, including brand design, programming, and teaching.
+              Over the course of my education and work experience, I have developed a robust skill set in various technologies and tools. These include:
             </p>
           </div>
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <img src={design} width={100} height={100} alt="Design Icon" />
-              <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
-              <p className="py-2">Creating elegant designs suited for your needs following core design theory.</p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
+              <h4 className="py-4 text-teal-600">Programming Languages</h4>
+              <p className="text-gray-800 py-1">Java</p>
+              <p className="text-gray-800 py-1">JavaScript</p>
+              <p className="text-gray-800 py-1">Python</p>
+              <p className="text-gray-800 py-1">C</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <img src={code} width={100} height={100} alt="Code Icon" />
-              <h3 className="text-lg font-medium pt-8 pb-2">Code your dream project</h3>
-              <p className="py-2">Do you have an idea for your next great website? Let's make it a reality.</p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
+              <h4 className="py-4 text-teal-600">Web Development</h4>
+              <p className="text-gray-800 py-1">HTML</p>
+              <p className="text-gray-800 py-1">CSS</p>
+              <p className="text-gray-800 py-1">React</p>
+              <p className="text-gray-800 py-1">Node.js</p>
+              <p className="text-gray-800 py-1">Express.js</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <img src={consulting} width={100} height={100} alt="Consulting Icon" />
-              <h3 className="text-lg font-medium pt-8 pb-2">Consulting</h3>
-              <p className="py-2">Are you interested in feedback for your current project? I can give you tips and tricks to level it up.</p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
+              <h4 className="py-4 text-teal-600">Databases</h4>
+              <p className="text-gray-800 py-1">MySQL</p>
+              <p className="text-gray-800 py-1">MongoDB</p>
+              <p className="text-gray-800 py-1">SQLite</p>
+            </div>
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+              <h4 className="py-4 text-teal-600">Other Tools & Technologies</h4>
+              <p className="text-gray-800 py-1">Git</p>
+              <p className="text-gray-800 py-1">Docker</p>
               <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
+              <p className="text-gray-800 py-1">Photoshop</p>
             </div>
           </div>
         </section>
@@ -121,35 +149,16 @@ function App() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white">Portfolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and developer, I've done remote work for
-              <span className="text-teal-500"> agencies </span>
-              consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talented people to create digital products for both business and consumer use.
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer a wide range of services, including brand design, programming, and teaching.
+              Welcome to my portfolio! Here, you will find a selection of my university projects and collaborations. These works showcase my skills, creativity, and dedication to developing innovative solutions. Each project represents a unique journey and a valuable learning experience. Dive in and explore the passion and effort I put into every piece of work. For more projects, check out my <a href="https://github.com/SahanPunchihewa" className="text-teal-500" target="_blank" rel="noopener noreferrer">GitHub</a>.
             </p>
           </div>
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1">
-              <img className="rounded-lg object-cover" src={web1} alt="Project 1" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <img className="rounded-lg object-cover" src={web2} alt="Project 2" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <img className="rounded-lg object-cover" src={web3} alt="Project 3" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <img className="rounded-lg object-cover" src={web4} alt="Project 4" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <img className="rounded-lg object-cover" src={web5} alt="Project 5" />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <img className="rounded-lg object-cover" src={web6} alt="Project 6" />
-            </div>
-          </div>
+          <Slider {...sliderSettings}>
+            {projects.map(project => (
+              <div key={project.id} className="p-2">
+                <img className="rounded-lg object-cover w-full h-80" src={project.image} alt={project.alt} />
+              </div>
+            ))}
+          </Slider>
         </section>
       </main>
     </div>
@@ -157,3 +166,4 @@ function App() {
 }
 
 export default App;
+
