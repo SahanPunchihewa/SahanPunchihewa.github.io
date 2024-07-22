@@ -58,7 +58,7 @@ function App() {
       <main className="bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
-            <h1 className="font-burtons text-xl">Developed by Sahan Punchihewa</h1>
+            <h1 className="font-burtons text-xl"></h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -69,8 +69,9 @@ function App() {
               <li>
                 <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
-                  href="https://drive.google.com/file/d/1GQm3hW41l-e4k7Q5w_9hgkuoFcMC9_CW/view"
+                  href="/Sahan Punchihewa - Resume.pdf"
                   target="_blank" rel="noopener noreferrer"
+                  download="Sahan Punchihewa - Resume.pdf"
                 >
                   Resume
                 </a>
@@ -166,4 +167,3 @@ function App() {
 }
 
 export default App;
-
