@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import deved from './assets/KEFI PC 1-487.jpg';
 import {
   SiTypescript, SiJavascript, SiPython, SiCsharp, SiPhp,
@@ -12,6 +12,7 @@ import { TbApi } from 'react-icons/tb';
 import { FaJava } from 'react-icons/fa';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const profile = useMemo(
     () => ({
@@ -177,18 +178,66 @@ function App() {
             <div className="text-lg font-bold text-white">
               Sahan Punchihewa
             </div>
-            <div className="flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-8">
               <a href="#home" className="text-gray-300 hover:text-cyan-400 transition-colors">Home</a>
               <a href="#skills" className="text-gray-300 hover:text-cyan-400 transition-colors">Skills</a>
               <a href="#experience" className="text-gray-300 hover:text-cyan-400 transition-colors">Experience</a>
               <a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
-
             </div>
+            <button
+              type="button"
+              className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-cyan-500/40 text-cyan-300 hover:text-cyan-200 hover:border-cyan-400 transition-colors"
+              aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
+          {isMenuOpen && (
+            <div className="md:hidden px-6 pb-4">
+              <div className="flex flex-col gap-3 rounded-xl border border-cyan-900/40 bg-[#0a1628] p-4">
+                <a
+                  href="#home"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Home
+                </a>
+                <a
+                  href="#skills"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Skills
+                </a>
+                <a
+                  href="#experience"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Experience
+                </a>
+                <a
+                  href="#contact"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+          )}
         </nav>
 
         {/* Hero Section */}
-        <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
+        <section id="home" className="relative min-h-screen flex items-center justify-center px-6 pt-20">
           <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
             <div className="space-y-6">
@@ -225,7 +274,7 @@ function App() {
                 </a>
               </div>
 
-              <div className="flex items-center gap-4 pt-4">
+              <div className="flex flex-wrap items-center gap-4 pt-4">
                 <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#0077b5] text-white px-4 py-2 rounded hover:bg-[#006396] transition-colors">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
                   LinkedIn
@@ -244,7 +293,7 @@ function App() {
             {/* Right Side - Profile Image */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 p-2 shadow-2xl animate-float">
+                <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 p-2 shadow-2xl animate-float">
                   <img
                     src={deved}
                     className="w-full h-full rounded-full object-cover border-4 border-[#0a192f] dark:border-[#020c1b]"
