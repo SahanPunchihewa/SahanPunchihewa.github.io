@@ -2,14 +2,14 @@ import React, { useMemo, useState } from 'react';
 import deved from './assets/KEFI PC 1-487.jpg';
 import {
   SiTypescript, SiJavascript, SiPython, SiCsharp, SiPhp,
-  SiReact, SiNodedotjs, SiNextdotjs, SiNestjs, SiFastapi, SiEslint, SiPrettier, SiJest,
-  SiPostgresql, SiMysql, SiMongodb, SiPrisma, SiSequelize, SiRedis,
-  SiAmazonaws, SiMicrosoftazure, SiGooglecloud, SiDigitalocean, SiRender, SiHeroku,
-  SiDocker, SiJenkins, SiGit, SiGithub, SiVisualstudiocode, SiPostman,
-  SiGraphql, SiOpenai, SiAnthropic
+  SiReact, SiNodedotjs, SiNextdotjs, SiNestjs, SiLaravel, SiWordpress, SiEslint, SiPrettier,
+  SiPostgresql, SiMysql, SiMongodb, SiFirebase, SiSqlite, SiMicrosoftsqlserver,
+  SiAmazonaws, SiMicrosoftazure, SiDigitalocean, SiRender, SiHeroku,
+  SiDocker, SiJenkins, SiGit, SiGithub, SiGitlab, SiVisualstudio, SiVisualstudiocode, SiPostman,
+  SiPowerapps, SiPowerautomate, SiMicrosoftsharepoint, SiGithubcopilot
 } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
-import { FaBrain, FaRobot, FaJava } from 'react-icons/fa';
+import { FaJava } from 'react-icons/fa';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -90,12 +90,10 @@ function App() {
         items: [
           { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
           { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
-          { name: 'Python', icon: SiPython, color: '#3776AB' },
           { name: 'Java', icon: FaJava, color: '#007396' },
           { name: 'C#', icon: SiCsharp, color: '#239120' },
           { name: 'PHP', icon: SiPhp, color: '#777BB4' },
           { name: 'REST API', icon: TbApi, color: '#009688' },
-          { name: 'GraphQL', icon: SiGraphql, color: '#E10098' },
         ],
       },
       {
@@ -106,11 +104,10 @@ function App() {
           { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
           { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
           { name: 'Nest.js', icon: SiNestjs, color: '#E0234E' },
-          { name: 'Fastify', icon: SiNodedotjs, color: '#000000' },
-          { name: 'FastAPI', icon: SiFastapi, color: '#009688' },
+          { name: 'Laravel', icon: SiLaravel, color: '#FF2D20' },
+          { name: 'WordPress', icon: SiWordpress, color: '#21759B' },
           { name: 'ESLint', icon: SiEslint, color: '#4B32C3' },
           { name: 'Prettier', icon: SiPrettier, color: '#F7B93E' },
-          { name: 'Jest', icon: SiJest, color: '#C21325' },
         ],
       },
       {
@@ -120,10 +117,9 @@ function App() {
           { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
           { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
           { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
-          { name: 'ChromaDB', icon: SiRedis, color: '#FF6B6B' },
-          { name: 'Prisma', icon: SiPrisma, color: '#2D3748' },
-          { name: 'Sequelize', icon: SiSequelize, color: '#52B0E7' },
-          { name: 'Redis', icon: SiRedis, color: '#DC382D' },
+          { name: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
+          { name: 'SQLite', icon: SiSqlite, color: '#003B57' },
+          { name: 'MSSQL', icon: SiMicrosoftsqlserver, color: '#CC2927' },
         ],
       },
       {
@@ -132,7 +128,6 @@ function App() {
         items: [
           { name: 'AWS', icon: SiAmazonaws, color: '#FF9900' },
           { name: 'Azure', icon: SiMicrosoftazure, color: '#0078D4' },
-          { name: 'Google Cloud', icon: SiGooglecloud, color: '#4285F4' },
           { name: 'Digital Ocean', icon: SiDigitalocean, color: '#0080FF' },
           { name: 'Render', icon: SiRender, color: '#46E3B7' },
           { name: 'Heroku', icon: SiHeroku, color: '#430098' },
@@ -143,11 +138,6 @@ function App() {
         group: 'AI Frameworks & Tools',
         icon: '🤖',
         items: [
-          { name: 'LangChain & LangGraph', icon: SiPython, color: '#1C3C3C' },
-          { name: 'OpenAI', icon: SiOpenai, color: '#412991' },
-          { name: 'Anthropic', icon: SiAnthropic, color: '#D4A574' },
-          { name: 'Gemini', icon: FaBrain, color: '#4285F4' },
-          { name: 'Ollama', icon: FaRobot, color: '#000000' },
           { name: 'Jupyter Notebook', icon: SiPython, color: '#F37626' },
         ],
       },
@@ -159,9 +149,20 @@ function App() {
           { name: 'Jenkins', icon: SiJenkins, color: '#D24939' },
           { name: 'Git', icon: SiGit, color: '#F05032' },
           { name: 'GitHub', icon: SiGithub, color: '#181717' },
-          { name: 'Cursor', icon: SiVisualstudiocode, color: '#007ACC' },
+          { name: 'GitLab', icon: SiGitlab, color: '#FC6D26' },
+          { name: 'Visual Studio', icon: SiVisualstudio, color: '#5C2D91' },
           { name: 'VS Code', icon: SiVisualstudiocode, color: '#007ACC' },
           { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
+        ],
+      },
+      {
+        group: 'Power Platform',
+        icon: '🧩',
+        items: [
+          { name: 'Power Apps', icon: SiPowerapps, color: '#742774' },
+          { name: 'Power Automate', icon: SiPowerautomate, color: '#0066FF' },
+          { name: 'SharePoint', icon: SiMicrosoftsharepoint, color: '#0078D4' },
+          { name: 'Copilot', icon: SiGithubcopilot, color: '#6E40C9' },
         ],
       },
     ],
@@ -258,10 +259,10 @@ function App() {
                     alt={profile.name}
                   />
                 </div>
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-6 py-3 rounded-full shadow-xl border border-gray-200 dark:border-gray-700 flex items-center gap-2">
+                {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-6 py-3 rounded-full shadow-xl border border-gray-200 dark:border-gray-700 flex items-center gap-2">
                   <span className="flex h-3 w-3 rounded-full bg-green-400 animate-pulse"></span>
                   <span className="font-medium">Available to connect</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
