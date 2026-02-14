@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import deved from './assets/KEFI PC 1-487.jpg';
 import {
   SiTypescript, SiJavascript, SiPython, SiCsharp, SiPhp,
@@ -12,7 +12,6 @@ import { TbApi } from 'react-icons/tb';
 import { FaJava } from 'react-icons/fa';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
 
   const profile = useMemo(
     () => ({
@@ -170,7 +169,7 @@ function App() {
   );
 
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div>
       <div className="min-h-screen bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] dark:from-[#020c1b] dark:via-[#0a192f] dark:to-[#020c1b]">
         {/* Top Navigation */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a192f]/95 dark:bg-[#020c1b]/95 backdrop-blur-sm border-b border-cyan-900/20">
@@ -183,14 +182,7 @@ function App() {
               <a href="#skills" className="text-gray-300 hover:text-cyan-400 transition-colors">Skills</a>
               <a href="#experience" className="text-gray-300 hover:text-cyan-400 transition-colors">Experience</a>
               <a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
-              <button
-                type="button"
-                onClick={() => setDarkMode(!darkMode)}
-                className="text-2xl hover:scale-110 transition-transform"
-                aria-label="Toggle dark mode"
-              >
-                {darkMode ? '☀️' : '🌙'}
-              </button>
+
             </div>
           </div>
         </nav>
