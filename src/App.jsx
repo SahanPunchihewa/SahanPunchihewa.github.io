@@ -244,7 +244,7 @@ function App() {
             {/* Right Side - Profile Image */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-2 shadow-2xl animate-float">
+                <div className="w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 p-2 shadow-2xl animate-float">
                   <img
                     src={deved}
                     className="w-full h-full rounded-full object-cover border-4 border-[#0a192f] dark:border-[#020c1b]"
