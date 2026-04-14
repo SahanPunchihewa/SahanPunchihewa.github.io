@@ -17,8 +17,8 @@ function App() {
   const profile = useMemo(
     () => ({
       name: 'Sahan Punchihewa',
-      title: 'Associate Software Engineer',
-      summary: 'Associate Software Engineer with hands-on experience in web, cloud, and automation projects. Passionate about building robust, scalable solutions and learning new technologies.',
+      title: 'Software Engineer',
+      summary: 'Software Engineer with hands-on experience in web, cloud, and automation projects. Passionate about building robust, scalable solutions and learning new technologies.',
       links: {
         linkedin: 'https://www.linkedin.com/in/sahan-punchihewa/',
         github: 'https://github.com/SahanPunchihewa',
