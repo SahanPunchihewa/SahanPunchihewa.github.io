@@ -25,8 +25,8 @@ function App() {
         email: 'mailto:sahannilupul18@gmail.com',
       },
       resume: {
-        href: '/Sahan_Punchihewa_Resume.pdf',
-        downloadName: 'Sahan_Punchihewa_Resume.pdf',
+        href: '/Sahan Punchihewa.pdf',
+        downloadName: 'Sahan Punchihewa.pdf',
       },
     }),
     []
